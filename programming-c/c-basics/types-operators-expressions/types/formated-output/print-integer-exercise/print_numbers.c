@@ -9,8 +9,12 @@ int main(void)
     unsigned int o = 01234;
 
     printf("\t+---------------+-----------+\n");
-    // TODO
+    printf("\t|  short        |  %d       |\n", i);
+    printf("\t|  int          |  %7d |\n", j);
+    printf("\t|  unsigned long|  %07ld |\n", k);
     printf("\t+---------------+-----------+\n");
-
+    printf("\t|  hex          |  %07x |\n", h);
+    printf("\t|  octal        |  %7o |\n", o);
+    printf("\t+---------------+-----------+\n");
     return 0;
 }
