@@ -13,12 +13,14 @@ int main(void)
     uint8_t n4 = 47;
     uint8_t n5 = 56;
 
-    // TODO: sum = 
-
-    // TODO: mean = 
+    float sum = n1 + n2 + n3 + n4 + n5;
+    printf("sum = %3.1f\n", sum);
+    assert(fabs(sum - 168) <= ERROR);
     
+    float mean = sum / 5.0;
+
     printf("mean = %5.2f\n", mean);
+    assert(fabs(mean - 33.6) <= ERROR);
 
     return 0;
 }
-
