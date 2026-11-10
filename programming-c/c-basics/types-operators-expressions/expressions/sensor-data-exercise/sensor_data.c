@@ -8,14 +8,14 @@ int main(void)
     int adc = 511;
     printf("ADV value = %d\n", adc);
 
-    // adc -> voltage [0.0..5.0]V 
-    double voltage = // TODO
+    // adc -> voltage [0.0..5.0]V
+    double voltage = adc * (5.0 / 1023.0);
     printf("voltage = %3.2f [V]\n", voltage);
 
     // temperature -> [-20.0, 80.0]°C
-    double temp = // TODO
+    double temp = voltage * 100.0 / 5.0;
+    temp = temp - 20.0;
     printf("temperature = %5.1f [°C]\n", temp);
 
     return 0;
 }
-
