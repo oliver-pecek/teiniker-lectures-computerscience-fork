@@ -8,9 +8,18 @@ int main(void)
 //    int amount = 75000;   // 5%
 //    int amount = 150000;  // 10%
 
-    int discount;
+    int discount = 0;
 
-    // TODO
+    if (amount >= 100000){
+        discount = 10;
+    }
+    else if (amount >= 50000 && amount < 100000){
+        discount = 5;
+    }else if (amount >= 10000 && amount < 50000) {
+        discount = 2;
+    }else {
+        discount = 0;
+    }
 
     printf("amount = EUR %5.2f   discount = %d%%\n", amount/100.0, discount);
 
