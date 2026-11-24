@@ -1,19 +1,27 @@
 #include <stdio.h>
 #include <assert.h>
 
-int sum_of_squares(int n);
+int sum_of_squares(int n)
+{
+    int sum = 0;
+    for (int i = 1; i <= n; i++)
+    {
+        sum = sum + (i * i);
+    }
+    return sum;
+}
 
 int main(void)
 {
-    int n=5;
+    int n = 5;
 
     int actual = sum_of_squares(n);
     printf("Sum of squares from 1 to %d = %d\n", n, actual);
-    
-    int expected = n*(n+1)*(2*n+1)/6;    
-    assert(expected == actual); 
+
+    int expected = n * (n + 1) * (2 * n + 1) / 6;
+    assert(expected == actual);
 
     return 0;
 }
 
-// TODO: 
+// TODO:
